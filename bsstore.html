@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belia Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin-top: 70px; /* Отступ для учета фиксированной навигации */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .navbar-nav a {
+            color: #000000;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .card img {
+            width: 410px;
+            height: auto;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #000;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            background: #fff;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .collection-title {
+            text-align: center;
+            margin: 40px 0; /* Увеличен отступ */
+        }
+
+        .btn-collection {
+            background: white;
+            color: black;
+            border-radius: 20px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .product {
+            background-color: #ffffff;
+            border: none;
+            width: auto;
+            height: 455px;
+        }
+
+        .product img {
+            width: auto;
+            height: 455px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .product-title {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .category-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px; /* Увеличен отступ */
+            margin-top: 40px;
+        }
+
+        .category-card .image-container {
+            background-color: white;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .category-card img {
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        .btn-custom {
+            background: black;
+            border: 1px solid white;
+            color: white;
+            width: 70%; /* Уменьшена ширина кнопки */
+            border-radius: 15px; /* Закругленные углы кнопки */
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background: white;
+            color: black;
+        }
+
+        .category-menu {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0; /* Увеличен отступ */
+            flex-wrap: wrap; /* Чтобы адаптировать для меньших экранов */
+        }
+
+        .category-menu a {
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .category-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .subcategory-list {
+            display: none;
+            text-align: left;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .subcategory-list a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .subcategory-list a:hover {
+            color: #ff6347;
+        }
+
+        .category-item {
+            position: relative;
+        }
+
+        .category-item:hover .subcategory-list {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../views/bsstore.html">Belia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">🔍</button>
+                </form>
+                <button class="btn btn-outline-light ms-3"><a href="../views/bsshop.html">🛒</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Категории над основными продуктами -->
+    <div class="category-menu">
+        <div class="category-item">
+            <a href="#">Мужская</a>
+            <div class="subcategory-list">
+                <a href="../views/bscostumes.html">Футболки</a>
+                <a href="#">Джинсы</a>
+                <a href="#">Куртки</a>
+            </div>
+        </div>
+        <div class="category-item">
+            <a href="#">Женская</a>
+            <div class="subcategory-list">
+                <a href="#">Платья</a>
+                <a href="#">Топы</a>
+                <a href="#">Юбки</a>
+            </div>
+        </div>
+        <div class="category-item">
+            <a href="#">Аксессуары</a>
+            <div class="subcategory-list">
+                <a href="#">Часы</a>
+                <a href="#">Сумки</a>
+                <a href="#">Очки</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основные продукты -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../public/images/photo1bs.png" class="card-img-top" alt="Product 1">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../public/images/photo2bs.png" class="card-img-top" alt="Product 2">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../public/images/photo3bs.png" class="card-img-top" alt="Product 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Новая коллекция 2025 -->
+    <div class="collection-title">
+        <h2>НОВАЯ КОЛЛЕКЦИЯ 2025</h2>
+        <button class="btn-collection">НОВАЯ КОЛЛЕКЦИЯ</button>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="product">
+                    <img src="../public/images/product1bs.png" class="card-img-top" alt="TPRLL NEW 2025">
+                    <div class="product-title">TPRLL NEW 2025</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product">
+                    <img src="../public/images/product2bs.png" class="card-img-top" alt="COLLUSION NEW 2025">
+                    <div class="product-title">COLLUSION NEW 2025</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product">
+                    <img src="../public/images/product3bs.png" class="card-img-top" alt="WHITER NEW 2025">
+                    <div class="product-title">WHITER NEW 2025</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product">
+                    <img src="../public/images/product4bs.png" class="card-img-top" alt="BLIRD NEW 2025">
+                    <div class="product-title">BLIRD NEW 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Категории -->
+    <div class="container text-center mt-6">
+        <div class="row">
+            <!-- Мужская категория -->
+            <div class="col-md-6">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="../public/images/manbs.png" alt="Мужская одежда">
+                    </div>
+                    <button class="btn btn-custom mt-3">Мужская</button>
+                </div>
+            </div>
+            <!-- Женская категория -->
+            <div class="col-md-6">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="../public/images/womanbs.png" alt="Женская одежда">
+                    </div>
+                    <button class="btn btn-custom mt-3">Женская</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

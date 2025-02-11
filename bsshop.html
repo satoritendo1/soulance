@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belia Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #000000;
+        }
+        .navbar-nav a {
+            color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../views/bsstore.html">Belia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">🔍</button>
+                </form>
+                <button class="btn btn-outline-light ms-3"><a href="../views/bsshop.html">🛒</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Личные данные</h3>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Имя">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Фамилия">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="Телефон">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select">
+                            <option selected>Казахстан</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select">
+                            <option selected>Город</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 text-center">
+                <h3>Костюм название</h3>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <button class="btn btn-light">-</button>
+                    <input type="text" class="form-control text-center mx-2" value="1" style="width: 60px;">
+                    <button class="btn btn-light">+</button>
+                </div>
+                <h4>9.999 RUB</h4>
+                <button class="btn btn-success">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h3 class="text-center">Рекомендуем</h3>
+        <div class="row row-cols-1 row-cols-md-6 g-3">
+            <div class="col">
+                <div class="card bg-secondary text-white text-center">
+                    <div class="card-body">
+                        <p>Костюм название<br>Название коллекции</p>
+                        <h5>9.999 RUB</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Добавить столько карточек, сколько нужно -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

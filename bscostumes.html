@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мужские костюмы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin-top: 70px; 
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .navbar-nav a {
+            color: #000000;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 10px 0 20px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: white;
+        }
+        .breadcrumb-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../views/bsstore.html">Belia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">🔍</button>
+                </form>
+                <button class="btn btn-outline-light ms-3"><a href="../views/bsshop.html">🛒</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb p-2">
+                <li class="breadcrumb-item"><a href="../views/bsstore.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#">Мужское</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Костюмы</li>
+            </ol>
+        </nav>
+
+        <h1 class="mt-3">МУЖСКИЕ  ФУТБОЛКИ</h1>
+        <div class="line"></div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card bg-dark text-white border-light">
+                    <div class="image-placeholder"></div>
+                    <div class="card-body">
+                        <p class="card-title">Костюм название</p>
+                        <p class="card-text">Название коллекции</p>
+                        <p class="fw-bold">9.999 RUB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-white border-light">
+                    <div class="image-placeholder"></div>
+                    <div class="card-body">
+                        <p class="card-title">Костюм название</p>
+                        <p class="card-text">Название коллекции</p>
+                        <p class="fw-bold">9.999 RUB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-white border-light">
+                    <div class="image-placeholder"></div>
+                    <div class="card-body">
+                        <p class="card-title">Костюм название</p>
+                        <p class="card-text">Название коллекции</p>
+                        <p class="fw-bold">9.999 RUB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-white border-light">
+                    <div class="image-placeholder"></div>
+                    <div class="card-body">
+                        <p class="card-title">Костюм название</p>
+                        <p class="card-text">Название коллекции</p>
+                        <p class="fw-bold">9.999 RUB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
